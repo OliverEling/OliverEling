@@ -1,0 +1,58 @@
+
+Algoritmo hospedaje
+	Escribir "Ingresa el valor de dias de hospedaje:"
+    Leer dias_de_hospedaje;
+    dia <- 500;
+	Repetir
+		
+    Escribir "Selecciona el valor de tipo de habitación."
+    Escribir "    1.- para una persona"
+    Escribir "    2.- sencilla"
+    Escribir "    3.- doble"
+    Escribir "    4.- familiar"
+	Escribir "    5.- VIP"
+    Repetir
+        Leer habitación
+        Si habitación<1 O habitación>5 Entonces
+            Escribir " favor de ingresar un numero valido.: ";
+        FinSi
+    Hasta Que habitación>=1 Y habitación<=5;
+    Si habitación = 1 Entonces
+        Precio <- 1000;
+
+    FinSi
+    Si habitación = 2 Entonces
+        Precio <- 3000;
+    FinSi
+    Si habitación = 3 Entonces
+        Precio <- 4500;
+	FinSi
+    Si habitación = 4 Entonces
+		Precio <- 5500;
+		
+	FinSi
+    Si habitación = 5 Entonces
+		Precio <- 6400;
+		
+    FinSi
+    Subtotal = dias_de_hospedaje*dia+precio;
+    Si dias_de_hospedaje>=4 Y habitación = 4 Entonces
+	
+	
+        Descuento <- subtotal*0.08;
+    SiNo
+        Descuento <- 600;
+    FinSi
+    Total <- subtotal-descuento;
+    Escribir "Valor de descuento: ", descuento;
+    Escribir "Valor de precio: ", precio;
+    Escribir "Valor de subtotal: ", subtotal;
+    Escribir "Valor de total: ", total;
+	Escribir "¿quiere otra habitación ?"
+	Leer respuesta
+ Hasta Que respuesta = "no"
+FinAlgoritmo
+
+
+
+
